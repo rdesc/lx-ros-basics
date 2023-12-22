@@ -2,9 +2,7 @@
 
 # About these activities
 
-<DESCRIPTION_HERE>
-
-In this learning experience, you will ... **TODO: Describe the LX activities and outcome here**
+In this learning experience, you will learn the basics of [ROS (Robot Operating System)](https://ros.org/).
 
 This learning experience is provided by the Duckietown team and can be run on Duckiebots. Visit us at the 
 [Duckietown Website](https://www.duckietown.com) for more learning materials, documentation, and demos.
