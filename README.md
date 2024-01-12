@@ -1,21 +1,16 @@
-# **Learning Experience (LX): <LX_TITLE_HERE>**
+# **Learning Experience (LX): ROS Basics**
 
 # About these activities
 
 In this learning experience, you will learn the basics of [ROS (Robot Operating System)](https://ros.org/).
 
-This learning experience is provided by the Duckietown team and can be run on Duckiebots. Visit us at the 
+This learning experience is provided by Duckietown in collaboration with 
+[Prof. Romulo Meira-Goes, Ph.D](https://www.eecs.psu.edu/departments/directory-detail-g.aspx?q=rzm5911) 
+(Pennsylvania State University). Visit the 
 [Duckietown Website](https://www.duckietown.com) for more learning materials, documentation, and demos.
 
-For guided setup instructions, lecture content, and more related to this LX, see **TODO: Add course link here**.
-
-## Grading challenge
-
-**TODO: Add optional challenge link or remove the `Grading challenge` section**
 
 # Instructions
-
-**TODO: Update Step 1. to match your learner setup**
 
 **NOTE:** All commands below are intended to be executed from the root directory of this exercise (i.e., the directory containing this README).
 
@@ -24,9 +19,11 @@ For guided setup instructions, lecture content, and more related to this LX, see
 
 Update your exercise definition and instructions,
 
-    git pull upstream <your upstream branch>
+    git remote add upstream git@github.com:duckietown/lx-ros-basics
+    git pull upstream main
 
-**NOTE:** Example instructions to fork a repository and configure to pull from upstream can be found in the [duckietown-lx repository README](https://github.com/duckietown/duckietown-lx/blob/mooc2022/README.md).
+**NOTE:** Example instructions to fork a repository and configure to pull from upstream can be found in the 
+[duckietown-lx repository README](https://github.com/duckietown/duckietown-lx/blob/mooc2022/README.md).
 
 
 ## 2. Make sure your system is up-to-date
@@ -92,60 +89,3 @@ You can also test using
     dts code workbench --duckiebot YOUR_DUCKIEBOT --local 
 
 This is the modality "drivers running on the robot, agent runs on the laptop."
-
-
-### 📽 Perform local evaluation
-
-We suggest you evaluate your work locally before submitting your solution.
-You can do so by running the following command,
-
-    dts code evaluate
-
-This should take a few minutes.
-This is not supposed to be an interactive process: just let it run, and when you return,
-you will find the output in a folder, including videos, and trajectories, and all the statistics
-you would usually find on the website.
-
-
-### 📬 Submit your solution
-
-When you are ready to submit your homework, use the following command,
-
-    dts code submit
-
-This will package all your code and send it to the Duckietown servers for evaluation.
-
-
-## Troubleshooting
-
-
-If an error of this form occurs
-
-```bash
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/dist-packages/duckietown_challenges_cli/cli.py", line 76, in dt_challenges_cli_main
-    dt_challenges_cli_main_(args=args, sections=sections, main_cmd="challenges")
-  File "/usr/local/lib/python3.8/dist-packages/duckietown_challenges_cli/cli.py", line 203, in dt_challenges_cli_main_
-    f(rest, environment)
-  File "/usr/local/lib/python3.8/dist-packages/duckietown_challenges_cli/cli_submit.py", line 165, in dt_challenges_cli_submit
-    br = submission_build(
-  File "/usr/local/lib/python3.8/dist-packages/duckietown_challenges_cli/cmd_submit_build.py", line 41, in submission_build
-    raise ZException(msg, available=list(credentials))
-zuper_commons.types.exceptions.ZException: Credentials for registry docker.io not available
-available:
-```
-
-you need to log into docker using `dts`. Use this command:
-
-```
-dts challenges config --docker-username <USERNAME> --docker-password <PASSWORD>
-```
-
-
-## Retire obsolete submissions
-
-Note that you can "retire" submissions that you know are wrong.
-You can do this through [the Duckietown Challenges website](https://challenges.duckietown.org/).
-
-To do so, login using your token, then find the submission you want to retire from the list of submission
-in your user profile page. Use the button "retire" to the right of the submission record line.
