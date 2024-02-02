@@ -9,4 +9,4 @@ html/*
 
 # project-specific
 workspace/*
-!workspace/src
+workspace/src
