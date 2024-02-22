@@ -37,12 +37,12 @@ class DTJoystickDemoNode():
             cmd_to_publish.vel_right = -v
             cmd_to_publish.vel_left = -v
 
-        if msg.axes[3] == 1.0:
+        if msg.axes[3] == -1.0:
             # turn right
             cmd_to_publish.vel_right = -v
             cmd_to_publish.vel_left = v
 
-        if msg.axes[3] == -1.0:
+        if msg.axes[3] == 1.0:
             # turn left
             cmd_to_publish.vel_right = v
             cmd_to_publish.vel_left = -v
