@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
 
 import rospy
+import os
 from sensor_msgs.msg import Joy
 from duckietown_msgs.msg import WheelsCmdStamped
 
 class DTJoystickDemoNode():
     def __init__(self):
-
+        
+        veh_name = os.environ['VEHICLE_NAME']
         self.sub_joy = rospy.Subscriber(
-            "/agent/joy", 
+            f"/{veh_name}/joy", 
             Joy,
             self.process_joy
         )
 
         self.pub_wheel_cmds = rospy.Publisher(
-            "/agent/wheels_driver_node/wheels_cmd",
+            f"/{veh_name}/wheels_driver_node/wheels_cmd",
             WheelsCmdStamped
         )
 
