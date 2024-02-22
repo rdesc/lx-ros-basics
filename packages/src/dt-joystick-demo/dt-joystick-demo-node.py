@@ -50,6 +50,6 @@ def process_joy(self,msg):
 
 if __name__ == "__main__":
     # Initialize the node
-    new-joy-node = dt-joystick-demo-node()
+    node = dt-joystick-demo-node()
     # Keep it spinning
     rospy.spin()
