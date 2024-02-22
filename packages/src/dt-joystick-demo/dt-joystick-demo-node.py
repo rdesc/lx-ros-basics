@@ -15,8 +15,7 @@ class DTJoystickDemoNode():
 
         self.pub_wheel_cmds = rospy.Publisher(
             "/agent/wheels_driver_node/wheels_cmd",
-            WheelsCmdStamped,
-            queue_size=1
+            WheelsCmdStamped
         )
 
     def process_joy(self,msg):
@@ -52,6 +51,6 @@ class DTJoystickDemoNode():
 if __name__ == "__main__":
     # Initialize the node
     node = DTJoystickDemoNode()
-    rospy.init_node('dt-joystick-demo-node')
+    rospy.init_node('dt_joystick_demo_node')
     # Keep it spinning
     rospy.spin()
