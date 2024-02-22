@@ -10,7 +10,7 @@ class DTJoystickDemoNode():
         self.sub_joy = rospy.Subscriber(
             "/agent/joy", 
             Joy,
-            self.process_joy() 
+            self.process_joy
         )
 
         self.pub_wheel_cmds = rospy.Publisher(
