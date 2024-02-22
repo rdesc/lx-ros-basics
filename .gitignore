@@ -12,3 +12,8 @@ workspace/*
 workspace/src
 
 .DS_Store
+
+packages/.catkin_tools/*
+packages/build/*
+packages/devel/*
+packages/logs/*
