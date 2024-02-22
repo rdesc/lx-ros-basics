@@ -10,3 +10,5 @@ html/*
 # project-specific
 workspace/*
 workspace/src
+
+.DS_Store
