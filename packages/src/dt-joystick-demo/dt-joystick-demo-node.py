@@ -52,5 +52,6 @@ class DTJoystickDemoNode():
 if __name__ == "__main__":
     # Initialize the node
     node = DTJoystickDemoNode()
+    rospy.init_node('dt-joystick-demo-node')
     # Keep it spinning
     rospy.spin()
