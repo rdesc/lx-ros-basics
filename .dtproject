@@ -10,7 +10,7 @@ NAME=lx-ros-basics
 RECIPE_REPOSITORY=duckietown/lx-recipe-ros-basics
 
 # - branch of RECIPE_REPOSITORY containing the recipe
-RECIPE_BRANCH=main
+RECIPE_BRANCH=ente
 
 # - location of the recipe inside the RECIPE_REPOSITORY/RECIPE_BRANCH above
 RECIPE_LOCATION=
