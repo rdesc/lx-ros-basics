@@ -62,6 +62,14 @@ Inside the code editor, use the navigator sidebar on the left-hand side to navig
 Follow the instructions on the notebook and work through the notebooks in sequence.
 
 
+### Build the Code
+
+You can build the code with 
+
+```
+dts code build
+```
+
 ### 💻 Testing in simulation
 
 To test in simulation, you should [create a virtual robot and connect it to the duckiematrix](https://docs.duckietown.com/ente/devmanual-duckiematrix/intermediate/virtual-duckiebots/intro.html)
