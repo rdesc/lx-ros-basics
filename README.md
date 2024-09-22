@@ -20,7 +20,7 @@ This learning experience is provided by Duckietown in collaboration with
 Update your exercise definition and instructions,
 
     git remote add upstream git@github.com:duckietown/lx-ros-basics
-    git pull upstream main
+    git pull upstream <branch>
 
 **NOTE:** Example instructions to fork a repository and configure to pull from upstream can be found in the 
 [duckietown-lx repository README](https://github.com/duckietown/duckietown-lx/blob/mooc2022/README.md).
@@ -64,16 +64,14 @@ Follow the instructions on the notebook and work through the notebooks in sequen
 
 ### 💻 Testing in simulation
 
-To test in simulation, use the command
+To test in simulation, you should [create a virtual robot and connect it to the duckiematrix](https://docs.duckietown.com/ente/devmanual-duckiematrix/intermediate/virtual-duckiebots/intro.html)
 
-    $ dts code workbench --sim
+Then you may run your code with 
 
-There will be two URLs popping up to open in your browser: one is the direct view of the
-simulated environment. The other is VNC and only useful for some exercises, follow the instructions
-in the notebooks to see if you need to access VNC.
+    $ dts code workbench --duckiebot YOUR_VIRTUAL_DUCKIEBOT
 
-This simulation test is just that, a test. Don't trust it fully. If you want a more accurate
-metric of performance, continue reading to the `Perform local evaluation` section below.
+There should be a link to the `novnc` browser that you can use to monitor the progress and test your code. 
+
 
 
 ### 🚙 Testing on a physical robot
@@ -84,8 +82,3 @@ You can test your agent on the robot using the command,
 
 This is the modality "everything runs on the robot".
 
-You can also test using
-
-    dts code workbench --duckiebot YOUR_DUCKIEBOT --local 
-
-This is the modality "drivers running on the robot, agent runs on the laptop."
