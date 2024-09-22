@@ -20,7 +20,7 @@ This learning experience is provided by Duckietown in collaboration with
 Update your exercise definition and instructions,
 
     git remote add upstream git@github.com:duckietown/lx-ros-basics
-    git pull upstream ente
+    git pull upstream <branch>
 
 **NOTE:** Example instructions to fork a repository and configure to pull from upstream can be found in the 
 [duckietown-lx repository README](https://github.com/duckietown/duckietown-lx/blob/mooc2022/README.md).
@@ -62,15 +62,30 @@ Inside the code editor, use the navigator sidebar on the left-hand side to navig
 Follow the instructions on the notebook and work through the notebooks in sequence.
 
 
+<<<<<<< HEAD
 ### 💻 Testing in the Duckiematrix
 
 To test in simulation, follow the procedure to run the Duckiematrix, create a virtual robot, and attach your virtual robot to an entity in the Duckiematrix. Finally test your code with:
 
     $ dts code workbench --duckiebot YOUR_VIRTUAL_ROBOT_NAME
+=======
+### Build the Code
 
-There will be two URLs popping up to open in your browser: one is the direct view of the
-simulated environment. The other is VNC and only useful for some exercises, follow the instructions
-in the notebooks to see if you need to access VNC.
+You can build the code with 
+
+```
+dts code build
+```
+
+### 💻 Testing in simulation
+
+To test in simulation, you should [create a virtual robot and connect it to the duckiematrix](https://docs.duckietown.com/ente/devmanual-duckiematrix/intermediate/virtual-duckiebots/intro.html)
+
+Then you may run your code with 
+
+    $ dts code workbench --duckiebot YOUR_VIRTUAL_DUCKIEBOT
+
+There should be a link to the `novnc` browser that you can use to monitor the progress and test your code. 
 
 
 ### 🚙 Testing on a physical robot
@@ -81,12 +96,3 @@ You can test your agent on the robot using the command,
 
 This is the modality "everything runs on the robot".
 
-You can also test using
-
-    dts code workbench --duckiebot YOUR_DUCKIEBOT --local 
-
-This is the modality "drivers running on the robot, agent runs on the laptop."
-
-### You're all set
-
-Proceed to [the first notebook](./notebooks/01_navigating_file_system.ipynb).
